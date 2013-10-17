@@ -2,3 +2,7 @@
 body { 
   padding-top: 65px; 
 }
+
+#calendar {
+  text-align: center;
+}
