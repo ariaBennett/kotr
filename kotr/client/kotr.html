@@ -1,0 +1,60 @@
+<head>
+  <title>kotr</title>
+</head>
+
+<body>
+  {{> page}}
+</body>
+
+
+<template name="page">
+  {{> navbar}}
+  {{#if showCalendar}}
+    {{> calendar}}
+  {{/if}}
+</template>
+
+<template name="navbar">
+  <div id="navbar">
+    <div class="navbar navbar-fixed-top">
+      <div class="navbar-inner">
+        <div class="container">
+          <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </a>
+          <a class="brand" href="#">Knights of the Round</a>
+          <div class="nav-collapse">
+            <ul class="nav">
+              <li><a href="#" class="navbar_button_calendar">Calendar</a></li>
+          </div><!-- /.nav-collapse -->
+        </div><!-- /.container -->
+      </div><!-- /.navbar-inner -->
+    </div><!-- /.navbar -->
+  </div>
+</template> 
+
+<template name="calendar">
+  <div id="calendar">
+    <div class="container">
+      <div class="row">
+        <iframe src="https://www.google.com/calendar/embed?height=600&amp;wkst=1&amp;bgcolor=%23FFFFFF&amp;src=5ui6hriqapdkqfodeaivuheirc%40group.calendar.google.com&amp;color=%232F6309&amp;ctz=America%2FLos_Angeles" style=" border-width:0 " width="800" height="600" frameborder="0" scrolling="no"></iframe>
+      </div>
+      <div class="row">
+        <div id="calendarControls">
+          <p>
+            <button class="btn btn-large btn-success" type="button">Join Event</button>
+            <button class="btn btn-large btn-danger" type="button">Leave Event</button>
+            <button class="btn btn-large btn-primary" type="button">Create New Event</button>
+          </p>
+        </div> <!-- /calendarControls --!>
+      </div>
+    </div> <!-- /container --!>
+  </div> <!-- /calendar --!>
+</template> 
+
+
+
+
+
