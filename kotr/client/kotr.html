@@ -12,6 +12,9 @@
   {{#if showCalendar}}
     {{> calendar}}
   {{/if}}
+  {{#if showAccount}}
+    {{> account}}
+  {{/if}}
 </template>
 
 <template name="navbar">
@@ -28,6 +31,7 @@
           <div class="nav-collapse">
             <ul class="nav">
               <li><a href="#" class="navbar_button_calendar">Calendar</a></li>
+              <li><a href="#" class="navbar_button_login">Log In</a></li>
           </div><!-- /.nav-collapse -->
         </div><!-- /.container -->
       </div><!-- /.navbar-inner -->
@@ -35,21 +39,35 @@
   </div>
 </template> 
 
+<template name="account">
+  <div id="account">
+    <form id="login-form" action="action">
+      <div>
+        <input type="email" id="login-email" />
+        <input type="password" id="login-password" />
+        <input type="submit" id="login-button" value="Sign in" />
+     </div>
+   </form> 
+  </div>
+</template>
+
 <template name="calendar">
   <div id="calendar">
     <div class="container">
       <div class="row">
         <iframe src="https://www.google.com/calendar/embed?height=600&amp;wkst=1&amp;bgcolor=%23FFFFFF&amp;src=5ui6hriqapdkqfodeaivuheirc%40group.calendar.google.com&amp;color=%232F6309&amp;ctz=America%2FLos_Angeles" style=" border-width:0 " width="800" height="600" frameborder="0" scrolling="no"></iframe>
       </div>
-      <div class="row">
-        <div id="calendarControls">
-          <p>
-            <button class="btn btn-large btn-success" type="button">Join Event</button>
-            <button class="btn btn-large btn-danger" type="button">Leave Event</button>
-            <button class="btn btn-large btn-primary" type="button">Create New Event</button>
-          </p>
-        </div> <!-- /calendarControls --!>
-      </div>
+      {{#if showCalendarButtons}}
+        <div class="row">
+          <div id="calendarControls">
+            <p>
+              <button class="btn btn-large btn-success" type="button">Join Event</button>
+              <button class="btn btn-large btn-danger" type="button">Leave Event</button>
+              <button class="btn btn-large btn-primary" type="button">Create New Event</button>
+            </p>
+          </div> <!-- /calendarControls --!>
+        </div>
+      {{/if}}
     </div> <!-- /container --!>
   </div> <!-- /calendar --!>
 </template> 
