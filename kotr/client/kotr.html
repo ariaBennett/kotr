@@ -43,11 +43,38 @@
   <div id="account">
     <form id="login-form" action="action">
       <div>
-        <input type="email" id="login-email" />
-        <input type="password" id="login-password" />
+        <div class="row">
+          <div class="span1 offset7">
+            Email: <input type="email" id="login-email" />
+          </div>
+        </div>
+        <div class="row">
+          <div class="span1 offset7">
+            Password: <input type="password" id="login-password" />
+          </div>
+        </div>
         <input type="submit" id="login-button" value="Sign in" />
-     </div>
-   </form> 
+      </div>
+    </form> 
+
+    <form id="register-form" action="action">
+      <div>
+        Create account
+        <div class="row">
+          <div class="span1 offset7">
+            Email: <input type="email" id="account-email" />
+          </div>
+        </div>
+        <div class="row">
+          <div class="span1 offset7">
+            Password: <input type="password" id="account-password" />
+          </div>
+        </div>
+        <div class="row">
+          <input type="submit" id="create-account" value="Create an Account" />
+        </div>
+      </div>
+    </form>
   </div>
 </template>
 
