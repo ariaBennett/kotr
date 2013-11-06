@@ -15,6 +15,9 @@
   {{#if showAccount}}
     {{> account}}
   {{/if}}
+  {{#if showHappyFunBox}}
+    {{> happyFunBox}}
+  {{/if}}
 </template>
 
 <template name="navbar">
@@ -31,6 +34,7 @@
           <div class="nav-collapse">
             <ul class="nav">
               <li><a href="#" class="navbar_button_calendar">Calendar</a></li>
+              <li><a href="#" class="navbar_button_happyFunBox">Happy Fun Box</a></li>
               <li><a href="#" class="navbar_button_login">Log In</a></li>
           </div><!-- /.nav-collapse -->
         </div><!-- /.container -->
@@ -84,7 +88,6 @@
       <div class="row">
         <iframe src="https://www.google.com/calendar/embed?height=600&amp;wkst=1&amp;bgcolor=%23FFFFFF&amp;src=5ui6hriqapdkqfodeaivuheirc%40group.calendar.google.com&amp;color=%232F6309&amp;ctz=America%2FLos_Angeles" style=" border-width:0 " width="800" height="600" frameborder="0" scrolling="no"></iframe>
       </div>
-      {{#if showCalendarButtons}}
         <div class="row">
           <div id="calendarControls">
             <p>
@@ -94,12 +97,16 @@
             </p>
           </div> <!-- /calendarControls --!>
         </div>
-      {{/if}}
     </div> <!-- /container --!>
   </div> <!-- /calendar --!>
 </template> 
 
-
-
-
-
+<template name="happyFunBox">
+  <div id="happyFunBox">
+    <div class="container">
+      <div class="row">
+        <canvas id="happyFunBoxBox" width=500px height=500px></canvas>
+      </div> <!-- /row --!>
+    </div> <!-- /container --!>
+  </div> <!-- /calendar --!>
+</template>

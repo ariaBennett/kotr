@@ -22,6 +22,16 @@ Template.navbar.events({
       enabledContent["account"] = true;
     }
     Session.set("enabledContent", enabledContent) ;
+  } ,
+  'click .navbar_button_happyFunBox': function () {
+    var enabledContent = Session.get("enabledContent") ;
+    if (enabledContent["happyFunBox"]) {
+      enabledContent["happyFunBox"] = false ;
+    }
+    else {
+      enabledContent["happyFunBox"] = true;
+    }
+    Session.set("enabledContent", enabledContent) ;
   }
 });
 
@@ -53,6 +63,13 @@ Template.account.events({
     }
 });
 
+// Template happyFunBox events
+Template.happyFunBox.events({
+  'click .happyFunBoxBox': function () {
+    console.log("Ouch!");
+  }
+});
+
 // Template functions
 Template.page.showCalendar = function () {
   return (Session.get("enabledContent"))["calendar"];
@@ -64,6 +81,10 @@ Template.page.showCalendarButtons = function () {
 
 Template.page.showAccount = function () {
   return (Session.get("enabledContent"))["account"];
+}
+
+Template.page.showHappyFunBox = function () {
+  return (Session.get("enabledContent"))["happyFunBox"];
 }
 
 // functions

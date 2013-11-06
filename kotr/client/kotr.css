@@ -11,3 +11,11 @@ body {
   text-align: center;
 }
 
+#happyFunBox {
+  text-align: center;
+}
+#happyFunBoxBox {
+  text-align: center;
+  border-style: solid;
+  border-width: 2px;
+}
