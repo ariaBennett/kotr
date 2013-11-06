@@ -75,10 +75,6 @@ Template.page.showCalendar = function () {
   return (Session.get("enabledContent"))["calendar"];
 }
 
-Template.page.showCalendarButtons = function () {
-  return (Session.get("enabledContent"))["calendarButtons"];
-}
-
 Template.page.showAccount = function () {
   return (Session.get("enabledContent"))["account"];
 }
