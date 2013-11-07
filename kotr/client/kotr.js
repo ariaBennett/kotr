@@ -70,6 +70,13 @@ Template.happyFunBox.events({
   }
 });
 
+// Template calendar events
+Template.calendar.events({
+  'click .btn-success': function () {
+    console.log("Ouch!");
+  }
+});
+
 // Template functions
 Template.page.showCalendar = function () {
   return (Session.get("enabledContent"))["calendar"];
